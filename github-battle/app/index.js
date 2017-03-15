@@ -64,59 +64,71 @@
 // );
 
 //
-let USER_DATA = {
-  name: 'Luzanov Pavel',
-  username: 'gitpash',
-  image: 'https://avatars0.githubusercontent.com/u/22022930?v=3&u=4770f7e04a4eadf985b9d9445ca348b4769458fb&s=400'
-}
+// let USER_DATA = {
+//   name: 'Luzanov Pavel',
+//   username: 'gitpash',
+//   image: 'https://avatars0.githubusercontent.com/u/22022930?v=3&u=4770f7e04a4eadf985b9d9445ca348b4769458fb&s=400'
+// }
 
 
 
 let React = require('react');
 let ReactDOM = require('react-dom');
+let routes = require('./config/routes')
 
-let ProfilePic = React.createClass({
-  render: function () {
-    return <img src={this.props.imageUrl} style={{height: 100, width: 100}} />
-  }
-});
+// let ProfilePic = React.createClass({
+//   render: function () {
+//     return <img src={this.props.imageUrl} style={{height: 100, width: 100}} />
+//   }
+// });
 
 
-let ProfileLink = React.createClass({
-  render: function () {
-    return (
-      <div>
-        <a href = {'https://www.github.com/' + this.props.username}>
-          {this.props.username}
-        </a>
-      </div>
-    );
-  }
-});
+// let Link = React.createClass({
+//   changeURL: function () {
+//     window.location.replace(this.props.href)
+//   },
+//   render: function () {
+//     return (
+//       <span style = {{ color: 'red', cursor: 'pointer'}}
+//         onClick={this.changeURL}>
+//         {this.props.children}
+//       </span>
+//     )
+//   }
+// })
 
-let ProfileName = React.createClass({
-  render: function (){
-    return<div>{this.props.name}</div>
-  }
-});
+// let ProfileLink = React.createClass({
+//   render: function () {
+//     return (
+//       <div>
+//         <Link href = {'https://www.github.com/' + this.props.username}>
+//           {this.props.username}
+//         </Link>
+//       </div>
+//     );
+//   }
+// });
+
+// let ProfileName = React.createClass({
+//   render: function (){
+//     return<div>{this.props.name}</div>
+//   }
+// });
 
 // создаём контейнер для всех трёх объектов
-let Avatar = React.createClass({
-  render: function () {
-    return(  // обязательно при рендере оборачивать в Один! корневой контейнер (тут див)
-      <div>
-          <ProfilePic imageUrl={this.props.user.image} />
-          <ProfileName name={this.props.user.name} />
-          <ProfileLink username={this.props.user.username} />
-      </div>
-    );
-  }
-});
+// let Avatar = React.createClass({
+//   render: function () {
+//     return(  // обязательно при рендере оборачивать в Один! корневой контейнер (тут див)
+//       <div>
+//           <ProfilePic imageUrl={this.props.user.image} />
+//           <ProfileName name={this.props.user.name} />
+//           <ProfileLink username={this.props.user.username} />
+//       </div>
+//     );
+//   }
+// });
 
-ReactDOM.render(
-    <Avatar user={USER_DATA} />,
-    document.getElementById('app')
-  );
+ReactDOM.render(routes,document.getElementById('app'));
 // var ProfilePic = function (props) {
 //   return <img src={'https://photo.fb.com/' + props.username} />
 // }
