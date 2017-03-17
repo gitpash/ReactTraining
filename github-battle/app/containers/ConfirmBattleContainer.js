@@ -10,11 +10,8 @@ const ConfirmBattleContainer =  React.createClass({
     console.log('getInitialState');
     return {
       isLoading: true,
-      playerInfo: []
+      playersInfo: []
     }
-  },
-  componentWillMount() {
-    console.log('componentWillMount');
   },
   componentDidMount() {
     console.log('componentDidMount');
@@ -29,19 +26,14 @@ const ConfirmBattleContainer =  React.createClass({
       }.bind(this)) // это для переопределения this внутри функции
   },
   handleInitiateBattle() {
-    this.content.router.push({
+    this.context.router.push({
       pathname: '/results',
       state: {
         playersInfo: this.state.playersInfo // это пушит все данные пользователя в route /results
       }
     })
   },
-  componentWillReceiveProps() {
-    console.log('componentWillReceiveProps');
-  },
-  componentWillUnmount() {
-    console.log('componentWillUnmount');
-  },
+
   render() {
     return (
       <ConfirmBattle
