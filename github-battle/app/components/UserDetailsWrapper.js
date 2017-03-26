@@ -1,12 +1,17 @@
-const React = require('react');
+const React = require('react')
+
 const PropTypes = React.PropTypes
 
-function UserDetailsWrapper (props) {
+function UserDetailsWrapper(props) {
     return (
-      <div className='col-sm-6'>
-        <p className='lead'>{props.header}</p>
+      <div className="col-sm-6">
+        <p className="lead">{props.header}</p>
         {props.children}
       </div>
     )
+}
+
+UserDetailsWrapper.header = {
+    header: PropTypes.string.isRequired,
 }
 module.exports = UserDetailsWrapper

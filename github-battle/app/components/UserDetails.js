@@ -1,36 +1,37 @@
-var React = require('react');
-var PropTypes = React.PropTypes;
+const React = require('react')
 
-function UserDetails (user) {
-  return (
-    <div>
-      {!!user.score && <li className="list-group-item"><h3>Score: {user.score}</h3></li>}
-      <li className="list-group-item"> <img src={user.info.avatar_url} className="img-rounded img-responsive"/></li>
-      {user.info.name && <li className="list-group-item">Name: {user.info.name}</li>}
-      <li className="list-group-item">Username: {user.info.login}</li>
-      {user.info.location && <li className="list-group-item">Location: {user.info.location}</li>}
-      {user.info.company && <li className="list-group-item">Company: {user.info.company}</li>}
-      <li className="list-group-item">Followers: {user.info.followers}</li>
-      <li className="list-group-item">Following: {user.info.following}</li>
-      <li className="list-group-item">Public Repos: {user.info.public_repos}</li>
-      {user.info.blog && <li className="list-group-item">Blog: <a href={user.info.blog}> {user.info.blog}</a></li>}
+const PropTypes = React.PropTypes
+
+function UserDetails(user) {
+    return (
+        <div>
+          {!!user.score && <li className="list-group-item"><h3>Score: {user.score}</h3></li>}
+          <li className="list-group-item"> <img src={user.avatar_url} className="img-rounded img-responsive"/></li>
+          {user.name && <li className="list-group-item">Name: {user.name}</li>}
+          <li className="list-group-item">Username: {user.login}</li>
+          {user.location && <li className="list-group-item">Location: {user.location}</li>}
+          {user.company && <li className="list-group-item">Company: {user.company}</li>}
+          <li className="list-group-item">Followers: {user.followers}</li>
+          <li className="list-group-item">Following: {user.following}</li>
+          <li className="list-group-item">Public Repos: {user.public_repos}</li>
+          {user.blog && <li className="list-group-item">Blog: <a href={user.blog}> {user.blog}</a></li>}
     </div>
-  )
+    )
 }
 
 UserDetails.propTypes = {
-  score: PropTypes.number,
-  info: PropTypes.shape({
-    avatar_url: PropTypes.string.isRequired,
-    blog: PropTypes.string,
-    company: PropTypes.string,
-    followers: PropTypes.number.isRequired,
-    following: PropTypes.number.isRequired,
-    location: PropTypes.string,
-    login: PropTypes.string.isRequired,
-    name: PropTypes.string,
-    public_repos: PropTypes.number.isRequired
-  })
+    score: PropTypes.number,
+    info: PropTypes.shape({
+        avatar_url: PropTypes.string.isRequired,
+        blog: PropTypes.string,
+        company: PropTypes.string,
+        followers: PropTypes.number.isRequired,
+        following: PropTypes.number.isRequired,
+        location: PropTypes.string,
+        login: PropTypes.string.isRequired,
+        name: PropTypes.string,
+        public_repos: PropTypes.number.isRequired,
+    }),
 }
 
-module.exports = UserDetails;
+module.exports = UserDetails
