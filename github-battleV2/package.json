@@ -3,6 +3,12 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
+  "scripts": {
+    "create": "webpack" 
+  },
+  "babel": {
+    "presets": [ "env", "react" ]
+  },
   "dependencies": {
     "react": "^15.5.4",
     "react-dom": "^15.5.4"
