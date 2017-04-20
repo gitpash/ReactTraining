@@ -3,6 +3,7 @@ body {
         BlincMacSystemFont,Segoe
         UI,Roboto,Oxygen-Sans,Ubunty,Cantarell,Helvetica 
         Neue,sans-serif;
+        
 }
 
 ul {
@@ -44,4 +45,13 @@ li {
 .popular-rank {
    font-size: 20px;
    margin: 10px;
+}
+.nav {
+    display: flex;
+}
+.active {
+    font-weight: bold;
+}
+.nav li {
+    margin-right: 15px;
 }

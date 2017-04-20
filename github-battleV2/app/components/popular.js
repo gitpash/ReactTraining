@@ -16,7 +16,7 @@ const RepoGrid = props => (
             />
           </li>
           <li>
-            <a href={repo.html_url}>{repo.name}</a>
+            <a href={repo.html_url} target="_blank">{repo.name}</a>
           </li>
           <li>
             @{repo.owner.login}
@@ -30,9 +30,8 @@ const RepoGrid = props => (
   </ul>
 );
 RepoGrid.PropTypes = {
-  repos: PropTypes.array.isRequired,
-
-}
+  repos: PropTypes.array.isRequired
+};
 const SelectLanguage = props => {
   const languages = ["All", "Javascript", "Ruby", "Java", "CSS", "Python"];
   return (
@@ -54,6 +53,8 @@ SelectLanguage.PropTypes = {
   selectedLanguage: PropTypes.string.isRequired,
   onSelect: PropTypes.func.isRequired
 };
+
+
 class Popular extends React.Component {
   constructor(props) {
     super(props);
@@ -93,8 +94,9 @@ class Popular extends React.Component {
           selectedLanguage={this.state.selectedLanguage}
           onSelect={this.updateLanguage}
         />
-        {!this.state.repos ? <p>Loading...</p>
-        : <RepoGrid repos={this.state.repos} />}
+        {!this.state.repos
+          ? <p>Loading...</p>
+          : <RepoGrid repos={this.state.repos} />}
       </div>
     );
   }
