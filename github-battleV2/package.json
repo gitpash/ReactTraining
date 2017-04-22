@@ -17,6 +17,7 @@
     "babel-preset-stage-2": "^6.24.1",
     "flow-bin": "^0.44.2",
     "npm": "^4.5.0",
+    "query-string": "^4.3.4",
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
     "react-router-dom": "^4.1.1"
