@@ -1,9 +1,9 @@
 // this is Stateless Functional Component
 import React from 'react';
-import { Link, NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom'; // for rendering anker(<a > tag)
 // then esing ES6 arrow => don't forget () around return
 const Nav = () => (
-  
+
   <ul className='nav'>
     <li>
       <NavLink exact activeClassName='active' to='/'>
