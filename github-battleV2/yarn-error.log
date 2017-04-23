@@ -1,5 +1,5 @@
 Arguments: 
-  /usr/local/Cellar/node/7.7.3/bin/node /usr/local/bin/yarn add query-string
+  /usr/local/Cellar/node/7.7.3/bin/node /usr/local/bin/yarn add firebase-tools -D
 
 PATH: 
   /usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin
@@ -20,7 +20,8 @@ npm manifest:
     "main": "index.js",
     "license": "MIT",
     "scripts": {
-      "start": "webpack-dev-server --open"
+      "start": "webpack-dev-server --open",
+      "build": "NODE_ENV='propduction' webpack -p"
     },
     "babel": {
       "presets": [
@@ -33,6 +34,7 @@ npm manifest:
       "babel-preset-stage-2": "^6.24.1",
       "flow-bin": "^0.44.2",
       "npm": "^4.5.0",
+      "query-string": "^4.3.4",
       "react": "^15.5.4",
       "react-dom": "^15.5.4",
       "react-router-dom": "^4.1.1"
@@ -3836,6 +3838,13 @@ Lockfile:
       object-assign "^4.1.0"
       strict-uri-encode "^1.0.0"
   
+  query-string@^4.3.4:
+    version "4.3.4"
+    resolved "https://registry.yarnpkg.com/query-string/-/query-string-4.3.4.tgz#bbb693b9ca915c232515b228b1a02b609043dbeb"
+    dependencies:
+      object-assign "^4.1.0"
+      strict-uri-encode "^1.0.0"
+  
   querystring-es3@^0.2.0:
     version "0.2.1"
     resolved "https://registry.yarnpkg.com/querystring-es3/-/querystring-es3-0.2.1.tgz#9ec61f79049875707d69414596fd907a4d711e73"
@@ -5034,4 +5043,4 @@ Lockfile:
       window-size "0.1.0"
 
 Trace: 
-  Error: EACCES: permission denied, unlink '/Users/pavelluz/webDev/ReactTraining/github-battleV2/node_modules/.bin/flow'
+  Error: EACCES: permission denied, mkdir '/Users/pavelluz/webDev/ReactTraining/github-battleV2/node_modules/from2/node_modules/isarray'
