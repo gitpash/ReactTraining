@@ -17,6 +17,6 @@ test("expect to get some property set", () => {
      avatar: "url" 
   };
   const result = PlayerPreview(props);
-  expect(typeof(result)).toBe({})
+  expect(typeof(result)).toBe(`object`)
 
 });
