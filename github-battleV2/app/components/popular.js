@@ -104,3 +104,4 @@ class Popular extends React.Component {
   }
 }
 export default Popular;
+export {RepoGrid, SelectLanguage}
